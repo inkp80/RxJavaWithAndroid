@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/tv_rxjava"
+		android:textSize="25dp"
+		android:textColor="@color/colorAccent"
+		android:text="Hello world"
+		android:textAlignment="center"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<Button
+		android:id="@+id/bt_rxjava"
+		android:text="button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+</LinearLayout>
