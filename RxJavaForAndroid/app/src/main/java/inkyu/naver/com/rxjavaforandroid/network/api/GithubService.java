@@ -1,7 +1,8 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.network.api;
 
 import java.util.List;
 
+import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 

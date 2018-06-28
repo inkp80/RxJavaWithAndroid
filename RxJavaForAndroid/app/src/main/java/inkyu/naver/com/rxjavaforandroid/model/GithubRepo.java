@@ -1,4 +1,4 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.model;
 
 /**
  * Created by inkyu.park on 2018. 6. 27..

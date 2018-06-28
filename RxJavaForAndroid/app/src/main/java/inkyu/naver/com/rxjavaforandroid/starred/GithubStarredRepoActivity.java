@@ -1,4 +1,4 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.starred;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,12 +9,15 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
+import inkyu.naver.com.rxjavaforandroid.network.GithubClient;
+import inkyu.naver.com.rxjavaforandroid.R;
+import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class MainActivity extends AppCompatActivity {
-	private static final String TAG = MainActivity.class.getName();
+public class GithubStarredRepoActivity extends AppCompatActivity {
+	private static final String TAG = GithubStarredRepoActivity.class.getName();
 
 	//views
 	private RecyclerView recyclerView;

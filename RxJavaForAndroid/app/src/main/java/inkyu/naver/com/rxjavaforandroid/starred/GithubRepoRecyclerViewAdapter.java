@@ -1,4 +1,4 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.starred;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import inkyu.naver.com.rxjavaforandroid.R;
+import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
 
 /**
  * Created by inkyu.park on 2018. 6. 27..

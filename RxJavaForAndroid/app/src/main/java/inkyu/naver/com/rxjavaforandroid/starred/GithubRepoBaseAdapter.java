@@ -1,4 +1,4 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.starred;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import inkyu.naver.com.rxjavaforandroid.R;
+import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
 import io.reactivex.annotations.Nullable;
 
 /**

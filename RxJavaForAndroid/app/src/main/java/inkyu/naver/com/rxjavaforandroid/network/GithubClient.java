@@ -1,11 +1,12 @@
-package inkyu.naver.com.rxjavaforandroid;
+package inkyu.naver.com.rxjavaforandroid.network;
 
 import java.util.List;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.reactivex.Scheduler;
+import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
+import inkyu.naver.com.rxjavaforandroid.network.api.GithubService;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
