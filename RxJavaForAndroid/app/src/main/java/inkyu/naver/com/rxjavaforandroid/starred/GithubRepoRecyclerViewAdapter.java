@@ -3,11 +3,12 @@ package inkyu.naver.com.rxjavaforandroid.starred;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,18 +16,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import inkyu.naver.com.rxjavaforandroid.R;
+import inkyu.naver.com.rxjavaforandroid.di.qualifier.ActivityContext;
+import inkyu.naver.com.rxjavaforandroid.di.scope.ActivityScope;
 import inkyu.naver.com.rxjavaforandroid.model.GithubRepo;
 
 /**
  * Created by inkyu.park on 2018. 6. 27..
  */
 
+@ActivityScope
 public class GithubRepoRecyclerViewAdapter extends RecyclerView.Adapter<GithubRepoRecyclerViewAdapter.GithubRecyclerViewHolder>{
+	private static final String TAG = GithubRepoRecyclerViewAdapter.class.getName();
 
 	private Context mContext;
+
 	private List<GithubRepo> githubRepoList = new ArrayList<>();
 
-	public GithubRepoRecyclerViewAdapter(Context context){
+	@Inject
+	public GithubRepoRecyclerViewAdapter(@ActivityContext Context context){
 		this.mContext = context;
 	}
 
@@ -34,13 +41,10 @@ public class GithubRepoRecyclerViewAdapter extends RecyclerView.Adapter<GithubRe
 		if (githubRepoList == null) {
 			return;
 		}
-		Log.d("RecyclerViewAdapter", "setGithubRepos");
 		this.githubRepoList.clear();
 		this.githubRepoList.addAll(githubRepoList);
 		notifyDataSetChanged();
 	}
-
-
 
 	@NonNull
 	@Override
@@ -77,12 +81,8 @@ public class GithubRepoRecyclerViewAdapter extends RecyclerView.Adapter<GithubRe
 			textLanguage = itemView.findViewById(R.id.text_language);
 			textStars = itemView.findViewById(R.id.text_stars);
 
-			itemView.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
-				}
-			});
+			itemView.setOnClickListener(
+				v -> Toast.makeText(mContext, textRepoName.getText().toString(), Toast.LENGTH_SHORT).show());
 		}
 	}
 }

@@ -21,7 +21,6 @@ public class GithubRepoBaseAdapter extends BaseAdapter {
 
 	private List<GithubRepo> githubRepoList = new ArrayList<>();
 
-
 	@Override
 	public int getCount() {
 		return githubRepoList.size();

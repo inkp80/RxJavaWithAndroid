@@ -17,8 +17,8 @@ import inkyu.naver.com.rxjavaforandroid.starred.di.GithubStarredRepoModule;
 
 @Singleton
 @Component(modules = {
+	AppModule.class,
 	ActivityBindingModule.class,
-	GithubStarredRepoModule.class,
 	AndroidSupportInjectionModule.class
 })
 public interface AppComponent extends AndroidInjector<BaseApplication> {
